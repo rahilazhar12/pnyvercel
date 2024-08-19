@@ -1,3 +1,6 @@
 module.exports = {
-    siteUrl:'https://www.pnytrainings.com',
-  }
+  siteUrl: 'https://www.pnytrainings.com',
+  generateRobotsTxt: true,
+}
+
+
