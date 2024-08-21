@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 const BrochureDownload = ({ params }) => {
   const router = useRouter();
   const { slug } = params;
-  const [formData, setFormData] = useState({ name: '', phone: '', email: '', city: '', id_address: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', city: '', id_address: '', course_id: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [courseData, setCourseData] = useState(null);
@@ -26,26 +26,35 @@ const BrochureDownload = ({ params }) => {
     e.preventDefault();
     setLoading(true);
     try {
+      console.log("Submitting form data:", formData);
+
+      // Use FormData to send the data
+      const form = new FormData();
+      form.append('name', formData.name);
+      form.append('phone', formData.phone);
+      form.append('email', formData.email);
+      form.append('city', formData.city);
+      form.append('id_address', formData.id_address);
+      form.append('course_id', formData.course_id);
+
       const response = await fetch('https://www.admin777.pny-trainings.com/api/brochure', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: form, // Send FormData object instead of JSON
       });
+
       if (response.ok) {
+        const responseData = await response.json();
+        console.log("Response data:", responseData);
         setIsSubmitted(true);
         setLoading(false);
-        // Redirect to the brochure download URL after form submission
-        router.push(courseData?.brochure); // Change this to the actual brochure URL
+        router.push(responseData.brochure_link); // Use the actual URL from the response
       } else {
-        // Handle error
+        console.error('Failed to submit form:', response.status, response.statusText);
         setLoading(false);
-        console.error('Failed to submit form');
       }
     } catch (error) {
-      setLoading(false);
       console.error('Error submitting form:', error);
+      setLoading(false);
     }
   };
 
@@ -58,6 +67,7 @@ const BrochureDownload = ({ params }) => {
       if (response.ok) {
         const data = await response.json();
         setCourseData(data.course);
+        setFormData((prevData) => ({ ...prevData, course_id: data.course.id })); // Set course_id in formData
       } else {
         console.error(`Failed to fetch course data for slug: ${slug}`);
       }
@@ -76,9 +86,6 @@ const BrochureDownload = ({ params }) => {
       fetchCourseData();
     }
   }, [slug]);
-
-
-  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
