@@ -3,7 +3,7 @@ export default async function Home() {
   const metadata = await fetch(
     "https://www.admin777.pny-trainings.com/api/metas/home",
     {
-      cache: "force-cache",
+      cache: "no-cache",
     }
   )
     .then((response) => response.json())

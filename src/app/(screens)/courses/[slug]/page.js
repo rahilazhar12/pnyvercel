@@ -19,7 +19,7 @@ export default async function Page({ params }) {
   const metadata = await fetch(
     `https://www.admin777.pny-trainings.com/api/category/${params.slug}`,
     {
-      cache: "force-cache",
+      cache: "no-cache",
     }
   )
     .then((response) => response.json())

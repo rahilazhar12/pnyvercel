@@ -2,7 +2,7 @@ import Sialkot1 from "./Sialkot1";
 
 export default async function Sialkotblogpage() {
   const metadata = await fetch(`https://www.admin777.pny-trainings.com/api/shortcourse/short-course-in-sialkot`, {
-    cache: 'force-cache'
+    cache: 'no-cache'
   })
     .then((response) => response.json())
     .then((data) => ({

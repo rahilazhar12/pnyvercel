@@ -2,7 +2,7 @@ import Faislabad1 from "./Faislabad1";
 
 export default async function Sialkotblogpage() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/shortcourse/short-courses-in-faisalabad', {
-    cache: 'force-cache'
+    cache: 'no-cache'
   })
     .then((response) => response.json())
     .then((data) => ({

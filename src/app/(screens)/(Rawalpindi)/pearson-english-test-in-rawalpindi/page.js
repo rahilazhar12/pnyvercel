@@ -2,7 +2,7 @@ import PearsonTest1 from "./PearsonTest1";
 
 export default async function PearsonTest() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/pearson-english-test-in-rawalpindi', {
-    cache: 'force-cache'
+    cache: 'no-cache'
   })
     .then((response) => response.json())
     .then((data) => ({

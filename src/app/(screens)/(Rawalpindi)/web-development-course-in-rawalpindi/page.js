@@ -2,7 +2,7 @@ import Webdevelopmentcourse1 from "./Webdevelopmentcourse1";
 
 export default async function Webdevelopmentcourse() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/web-development-course-in-rawalpindi', {
-    cache: 'force-cache'
+    cache: 'no-cache'
   })
     .then((response) => response.json())
     .then((data) => ({

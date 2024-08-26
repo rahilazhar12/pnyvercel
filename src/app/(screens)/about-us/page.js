@@ -2,7 +2,7 @@ import About from "./About";
 
 export default async function Aboutus() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/metas/about', {
-    cache: 'force-cache'
+    cache: 'no-cache'
   })
     .then((response) => response.json())
     .then((data) => ({

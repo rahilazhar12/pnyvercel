@@ -2,7 +2,7 @@ import Clientterm from "./Clientterm";
 
 export default async function Termsandconditions() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/pages/terms-conditions', {
-    cache: 'force-cache'
+    cache: 'no-cache'
   })
     .then((response) => response.json())
     .then((data) => ({

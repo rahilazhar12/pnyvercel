@@ -2,7 +2,7 @@ import SpokenEnglish1 from "./SpokenEnglish1";
 
 export default async function SpokenEnglish() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/spoken-english-course-in-rawalpindi', {
-    cache: 'force-cache'
+    cache: 'no-cache'
   })
     .then((response) => response.json())
     .then((data) => ({
