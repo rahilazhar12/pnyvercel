@@ -57,6 +57,10 @@ export default async function Page({ params }) {
             <title>{metadata.metatitle}</title>
             <meta name="description" content={metadata.metadescription} />
             <link rel="icon" href="/favicon.ico" />
+            <link
+                rel="canonical"
+                href={`https://pnytrainings.com/city/${params.slug}`}
+            />
             <Clientcity params={params} />
         </>
     )
