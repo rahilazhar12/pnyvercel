@@ -2,7 +2,7 @@ import Adobepremiere1 from "./Adobepremiererwp";
 
 export default async function Adobepremierepro() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/adobe-premiere-pro-course-in-rawalpindi', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({
