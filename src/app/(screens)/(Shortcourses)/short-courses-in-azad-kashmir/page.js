@@ -4,7 +4,7 @@ export default async function Kashmirpage() {
     const metadata = await fetch(
         `https://www.admin777.pny-trainings.com/api/shortcourse/short-courses-in-azad-kashmir`,
         {
-            cache: 'no-cache'
+            cache: 'no-store'
         }
     )
         .then((response) => response.json())

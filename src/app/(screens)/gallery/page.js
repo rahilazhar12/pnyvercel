@@ -2,7 +2,7 @@ import Gallery1 from "./Gallery1";
 
 export default async function Gallery() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/gallery', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

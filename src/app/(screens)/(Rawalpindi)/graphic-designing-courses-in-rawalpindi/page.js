@@ -2,7 +2,7 @@ import GraphicDesigning1 from "./GraphicDesigning1";
 
 export default async function GraphicDesigning() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/graphic-designing-courses-in-rawalpindi', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

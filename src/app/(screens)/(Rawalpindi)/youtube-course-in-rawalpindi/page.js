@@ -2,7 +2,7 @@ import YouTubeCourse1 from "./YouTubeCourse1";
 
 export default async function YouTubeCourse() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/youtube-course-in-rawalpindi', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

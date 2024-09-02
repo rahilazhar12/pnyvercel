@@ -2,7 +2,7 @@ import Androidcourse1 from "./Androidcourse1";
 
 export default async function Androidcourse() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/android-development-course-in-islamabad', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

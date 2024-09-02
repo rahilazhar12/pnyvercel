@@ -2,7 +2,7 @@ import Trainingschedule1 from "./Trainingschedule1";
 
 export default async function Trainingschedule() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/metas/training-schedule', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

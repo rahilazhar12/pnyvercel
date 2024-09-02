@@ -2,7 +2,7 @@ import Gujranwala from "./Gujranwala";
 
 export default async function Sialkotblogpage() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/shortcourse/short-courses-in-gujranwala', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

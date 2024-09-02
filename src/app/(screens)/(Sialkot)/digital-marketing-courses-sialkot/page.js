@@ -2,7 +2,7 @@ import DigitalMarksialkot1 from "./DigitalMarksialkot1";
 
 export default async function DigitalMarksialkot() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/digital-marketing-courses-sialkot', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

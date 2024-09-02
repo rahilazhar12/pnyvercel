@@ -18,7 +18,7 @@ export default async function Sialkotblogpage({ params }) {
     const metadata = await fetch(
         `https://www.admin777.pny-trainings.com/api/shortcourse/short-course-in-sialkot`,
         {
-            cache: 'no-cache'
+            cache: 'no-store'
         }
     )
         .then((response) => response.json())

@@ -2,7 +2,7 @@ import FeeStructure1 from "./FeeStructure1";
 
 export default async function FeeStructure() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/metas/fee-sturcture', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

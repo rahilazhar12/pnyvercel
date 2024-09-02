@@ -2,7 +2,7 @@ import Faqs1 from "./Faqs1";
 
 export default async function Home() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/faqs', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

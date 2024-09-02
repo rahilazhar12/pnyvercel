@@ -2,7 +2,7 @@ import EmpowringProfessional1 from "./EmpowringProfessional1";
 
 export default async function EmpowringProfessional() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/pny-trainings-in-multan-empowring-professional-skills', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

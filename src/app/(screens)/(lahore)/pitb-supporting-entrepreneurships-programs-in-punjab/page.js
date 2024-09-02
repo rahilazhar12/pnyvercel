@@ -2,7 +2,7 @@ import PITB1 from "./PITB1";
 
 export default async function PITB() {
   const metadata = await fetch('https://www.admin777.pny-trainings.com/api/city/specialpage/pitb-supporting-entrepreneurships-programs-in-punjab', {
-    cache: 'no-cache'
+    cache: 'no-store'
   })
     .then((response) => response.json())
     .then((data) => ({

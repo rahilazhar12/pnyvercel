@@ -38,7 +38,7 @@ export default async function Page({ params }) {
             `https:https://www.admin777.pny-trainings.com/api/city/${params.slug}`,
 
             {
-                cache: "no-cache",
+                cache: "no-store",
             }
         );
         const data = await response.json();
