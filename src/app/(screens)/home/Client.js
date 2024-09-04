@@ -197,7 +197,7 @@ const ClientComponent = () => {
                             <div className="flex flex-col items-center">
                                 <FaUsers className="text-4xl mb-2 text-blue-500" />
                                 <span className=" font-semibold dark:text-black">
-                                    75000+ Alumni
+                                    100K Alumni
                                 </span>
                             </div>
                             <div className="flex flex-col items-center">
@@ -209,13 +209,13 @@ const ClientComponent = () => {
                             <div className="flex flex-col items-center">
                                 <FaChalkboardTeacher className="text-4xl mb-2 text-blue-500" />
                                 <span className=" font-semibold dark:text-black">
-                                    150+ Instructors
+                                    300+ Instructors
                                 </span>
                             </div>
                             <div className="flex flex-col items-center">
                                 <FaHandshake className="text-4xl mb-2 text-blue-500" />
                                 <span className=" font-semibold dark:text-black">
-                                    80+ MoU's Sign
+                                    100+ MoU's Sign
                                 </span>
                             </div>
                         </div>
